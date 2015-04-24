@@ -1,0 +1,22 @@
+configure(subprojects.findAll {it.name.startsWith('bluemix-java-')}) {
+    apply plugin: 'java'
+    repositories {
+    	mavenCentral()
+	}
+}
+
+project("bluemix-java-servlet") {
+	apply plugin: 'jetty'
+	dependencies {
+		providedCompile("javax.servlet:javax.servlet-api:3.0.1")
+	}
+	war.baseName = 'demo'
+}
+
+project("bluemix-java-springboot-mongodb") {
+	apply plugin: 'jetty'
+	dependencies {
+		providedCompile("javax.servlet:javax.servlet-api:3.0.1")
+	}
+	war.baseName = 'demo'
+}
