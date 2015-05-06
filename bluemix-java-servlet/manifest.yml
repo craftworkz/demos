@@ -1,6 +1,0 @@
----
-applications:
-  - name: craftworkz-demo
-    memory: 1GB
-    instances: 1
-    path: build/libs/demo.war

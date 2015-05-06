@@ -1,3 +1,12 @@
+buildscript {
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE")
+    }
+    repositories {
+    	mavenCentral()
+	}
+}
+
 configure(subprojects.findAll {it.name.startsWith('bluemix-java-')}) {
     apply plugin: 'java'
     repositories {
@@ -5,18 +14,15 @@ configure(subprojects.findAll {it.name.startsWith('bluemix-java-')}) {
 	}
 }
 
-project("bluemix-java-servlet") {
-	apply plugin: 'jetty'
+project("bluemix-java-spring-mongodb") {
+	apply plugin: 'spring-boot'
+	
 	dependencies {
-		providedCompile("javax.servlet:javax.servlet-api:3.0.1")
+		compile("org.springframework.boot:spring-boot-starter-web:1.2.3.RELEASE")
+		compile("org.springframework.cloud:spring-cloud-cloudfoundry-connector:1.1.0.RELEASE")
+		compile("org.springframework.cloud:spring-cloud-spring-service-connector:1.1.0.RELEASE")
+    	compile("org.springframework.data:spring-data-mongodb:1.6.0.RELEASE")
 	}
-	war.baseName = 'demo'
-}
-
-project("bluemix-java-springboot-mongodb") {
-	apply plugin: 'jetty'
-	dependencies {
-		providedCompile("javax.servlet:javax.servlet-api:3.0.1")
-	}
-	war.baseName = 'demo'
+	
+	jar.baseName= 'demo'
 }

@@ -1,4 +1,3 @@
 rootProject.name = "bluemix"
 
-include "bluemix-java-servlet"
-include "bluemix-java-springboot-mongodb"
+include "bluemix-java-spring-mongodb"
