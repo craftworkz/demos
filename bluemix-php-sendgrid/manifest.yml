@@ -1,0 +1,7 @@
+applications:
+- services:
+  - mysql-hy
+  name: craftworkz-php
+  memory: 128MB
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/php-buildpack.git
