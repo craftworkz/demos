@@ -1,6 +1,6 @@
 applications:
 - services:
-  - mysql-hy
+  - sendgrid-test
   name: craftworkz-php
   memory: 128MB
   instances: 1
