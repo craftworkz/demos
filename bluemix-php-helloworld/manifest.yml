@@ -1,5 +1,5 @@
 applications:
-- name: bluemix-php-helloworld
-  memory: 128MB
+- name: bluemix-php-scaling
+  memory: 64MB
   instances: 1
   buildpack: https://github.com/cloudfoundry/php-buildpack.git
