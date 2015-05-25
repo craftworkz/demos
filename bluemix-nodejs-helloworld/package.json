@@ -1,0 +1,14 @@
+{
+  "name": "bluemix-nodejs-helloworld",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "cfenv": "~1.0.0",
+    "express": "~4.12.4",
+    "express-handlebars": "~2.0.1"
+  }
+}
