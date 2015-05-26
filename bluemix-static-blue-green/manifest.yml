@@ -1,0 +1,5 @@
+applications:
+- memory: 64MB
+  instances: 1
+  host: cw-blue-green
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack
