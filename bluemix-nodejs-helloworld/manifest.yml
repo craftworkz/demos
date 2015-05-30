@@ -1,0 +1,4 @@
+applications:
+- name: bluemix-nodejs-helloworld
+  memory: 128MB
+  instances: 1
