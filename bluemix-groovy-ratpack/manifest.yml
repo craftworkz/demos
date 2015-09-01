@@ -1,0 +1,7 @@
+---
+applications:
+  - name: bluemix-groovy-ratpack
+    memory: 256MB
+    instances: 1
+    path: build/libs/bluemix-groovy-ratpack-all.jar
+    buildpack: https://github.com/cloudfoundry/java-buildpack

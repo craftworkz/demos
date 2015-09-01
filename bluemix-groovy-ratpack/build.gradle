@@ -1,0 +1,21 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath "io.ratpack:ratpack-gradle:0.9.19"
+    classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.2'
+  }
+}
+
+apply plugin: "io.ratpack.ratpack-groovy"
+apply plugin: 'com.github.johnrengelman.shadow'
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  compile ratpack.dependency("jackson-guice")
+  runtime "org.slf4j:slf4j-simple:1.7.12"
+}
